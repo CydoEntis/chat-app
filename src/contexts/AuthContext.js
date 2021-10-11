@@ -11,5 +11,15 @@ export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({});
 	const history = useHistory();
 
-	useEffect(() => {}, []);
+	useEffect(() => {
+		auth.onAuthStateChanged((user) => {
+			setUser(user);
+			setLoading(false);
+			history.push('/chats');
+		});
+	}, [user, history]);
+
+	const value = { user };
+
+	return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
 };
