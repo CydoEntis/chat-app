@@ -1,101 +1,253 @@
 /* Global */
 
 * {
-  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
+		Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	color: white;
+}
+
+div {
+	border: none !important;
 }
 
 /* Chats Page */
-
 .chats-page {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .nav-bar {
-  width: 100%;
-  height: 66px;
-  background-color: #002766;
+	width: 100%;
+	height: 66px;
+	background-color: #2b2d32;
 }
 
 .logo-tab {
-  position: absolute;
-  left: 22px;
-  top: 12px;
-  font-size: 32px;
-  font-weight: 700;
-  color: white;
+	position: absolute;
+	left: 22px;
+	top: 12px;
+	font-size: 32px;
+	font-weight: 700;
+	color: white;
 }
 
 .logout-tab {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  color: white;
-  cursor: pointer;
+	position: absolute;
+	top: 22px;
+	right: 22px;
+	color: white;
+	cursor: pointer;
+}
+
+.logout-tab:hover {
+	color: #a6d12e;
 }
 
 ::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
+	width: 0; /* Remove scrollbar space */
+	background: transparent; /* Optional: just make scrollbar invisible */
 }
 
 /* Login Page */
 
 #login-page {
-  background-image: linear-gradient(#40a9ff, #096dd9);
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+	background: #2b2d32;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
 }
 
 #login-card {
-  position: relative;
-  top: calc(50vh - 144px);
-  left: calc(50vw - 210px);
-  padding-top: 36px;
-  padding-bottom: 66px;
-  width: 420px;
-  text-align: center;
-  background-color: white;
-  border-radius: 22px;
+	position: relative;
+	top: calc(50vh - 144px);
+	left: calc(50vw - 210px);
+	padding-top: 36px;
+	padding-bottom: 66px;
+	width: 420px;
+	text-align: center;
+	background-color: #40444b;
+	border-radius: 22px;
 }
 
 .login-button {
-  cursor: pointer;
-  color: white;
-  padding: 12px;
-  border-radius: 8px;
-  display: inline-block;
-}
-
-.facebook {
-  background-color: #3b5998;
+	cursor: pointer;
+	color: white;
+	padding: 12px;
+	border-radius: 8px;
+	display: inline-block;
 }
 
 .google {
-  background-color: #4285f4;
-  color: white;
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	color: black;
+}
+
+.google:hover {
+	opacity: 0.7;
+}
+
+.googleIcon {
+	margin-right: 1rem;
+	background: black;
+	font-size: 32px;
 }
 
 #loading-container {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: rgb(255, 255, 255, 0.22);
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgb(255, 255, 255, 0.22);
 }
 
 #loading-icon {
-  font-size: 66px;
-  position: relative;
-  left: calc(50vw - 33px);
-  top: calc(50vh - 22px);
+	font-size: 66px;
+	position: relative;
+	left: calc(50vw - 33px);
+	top: calc(50vh - 22px);
+}
+
+.ce-chat-title-text {
+	color: #a6d12e !important;
+}
+
+.ce-chat-subtitle-text {
+	color: #a6d12e !important;
+}
+
+#ce-send-message-button {
+	background-color: #a6d12e !important;
+}
+
+#ce-send-message-button:hover {
+	background-color: #c1d12e !important;
+}
+
+.ce-chat-feed-container {
+	background-color: #36393f !important;
+}
+
+.ce-message-input-form {
+	background-color: #36393f !important;
+}
+
+#msg-textarea {
+	background: #40444b;
+	border: none !important;
+	outline: none !important;
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+}
+
+.ce-chat-title-container {
+	background: #36393f;
+	text-align: left !important;
+	padding: 1rem !important;
+	border-bottom: 2px solid #2b2d32;
+}
+
+.ce-settings {
+	background: #36393f !important;
+	border-left: 1px solid #2b2d32 !important;
+}
+
+.ce-settings-container {
+	padding: 1rem 0;
+}
+
+.ce-text-input,
+.ce-input,
+.ce-section-title {
+	border: none !important;
+	outline: none;
+	/* background: #40444b; */
+	/* border-bottom: 1px solid #2b2d32 !important; */
+	/* border-top: 1px solid #2b2d32 !important; */
+}
+
+.ce-autocomplete-options div {
+	background: #40444b;
+}
+
+.ce-autocomplete-option {
+	width: 100%;
+	background: #40444b !important;
+}
+
+.ce-autocomplete-option div {
+	padding: 0 2px;
+	margin: 0;
+	background: #40444b !important;
+	/* width: 100%; */
+}
+
+.ce-photo-section,
+.ce-section-title-container {
+	border: none !important;
+}
+
+.ce-section-title.ce-people-title {
+	border-top: 1px solid #2b2d32 !important;
+}
+
+.ce-section-title:hover,
+#ce-options-drop-down:hover,
+svg:hover,
+span:hover,
+#ce-options-drop-down div:hover {
+	background: #2b2d32;
+}
+
+.ce-avatar {
+	z-index: 100;
+}
+
+.ce-text-input,
+#ce-add-username-input {
+	background: #40444b;
+}
+
+.ce-section-title-container:hover,
+#ce-options-drop-down:hover {
+	background: #2b2d32 !important;
+}
+
+.ce-delete-chat i {
+	background: red !important;
+	color: white !important;
+}
+
+.ce-danger-button {
+	background: red !important;
+}
+.ce-danger-button svg:hover {
+	background: red !important;
+}
+
+#ce-send-message-button span svg {
+	color: black !important;
+}
+
+#ce-send-message-button span svg:hover {
+	background: transparent !important;
+}
+
+.anticon-arrow-up:hover {
+	color: black !important;
+	background: transparent !important;
+}
+
+.ce-message-input-form {
+	color: black !important;
 }

@@ -3,6 +3,10 @@ import { useHistory } from 'react-router-dom';
 import { ChatEngine } from 'react-chat-engine';
 import { auth } from '../firebase';
 
+import ChatList from './Chat/ChatList';
+import ChatHeader from './ChatHeader/ChatHeader';
+import Message from './Message/Message';
+
 import { useAuth } from '../contexts/AuthContext';
 import axios from 'axios';
 
@@ -80,7 +84,36 @@ const Chats = () => {
 				projectID={process.env.REACT_APP_CHAT_ENGINE_ID}
 				userName={user.email}
 				userSecret={user.uid}
+				renderChatHeader={() => <ChatHeader />}
+				renderChatList={(chatEngineState) => <ChatList {...chatEngineState} />}
+				renderMessageBubble={(creds, chat, lastMessage, message, nextMessage) => (
+					<Message
+						creds={creds}
+						chat={chat}
+						lastMessage={lastMessage}
+						message={message}
+						nextMessage={nextMessage}
+					/>
+				)}
+				renderSendingMessages={(creds, chat, lastMessage, message, nextMessage) => (
+					<Message
+						creds={creds}
+						chat={chat}
+						lastMessage={lastMessage}
+						message={message}
+						nextMessage={nextMessage}
+						sending={true}
+					/>
+				)}
 			/>
+
+			{/* <ChatEngine
+				height="calc(100vh - 66px)"
+				projectID={process.env.REACT_APP_CHAT_ENGINE_ID}
+				userName={user.email}
+				userSecret={user.uid}
+				renderChatList={(chatAppState) => {}}
+			/> */}
 		</div>
 	);
 };
