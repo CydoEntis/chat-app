@@ -60,7 +60,6 @@ const Chats = () => {
 							.catch((e) => console.log('e', e.response));
 					});
 				});
-			// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		}
 	}, [user, history]);
 
@@ -69,7 +68,7 @@ const Chats = () => {
 	return (
 		<div className="chats-page">
 			<div className="nav-bar">
-				<div className="logo-tab">Unichat</div>
+				<div className="logo-tab">Discube</div>
 
 				<div onClick={handleLogout} className="logout-tab">
 					Logout
